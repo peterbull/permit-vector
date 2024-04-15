@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "permit-vector"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+openai = "^1.17.1"
+llama-index = "^0.10.29"
+ipykernel = "^6.29.4"
+arize-phoenix = {extras = ["evals"], version = "^3.21.0"}
+nest-asyncio = "^1.6.0"
+protobuf = "3.20"
+openinference-instrumentation-llama-index = "^1.2.1"
+llama-index-callbacks-arize-phoenix = "^0.1.4"
+llama-index-llms-openai = "^0.1.15"
+opentelemetry-sdk = "^1.24.0"
+opentelemetry-api = "^1.24.0"
+ipywidgets = "^8.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
