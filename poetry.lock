@@ -302,6 +302,17 @@ html5lib = ["html5lib"]
 lxml = ["lxml"]
 
 [[package]]
+name = "blinker"
+version = "1.7.0"
+description = "Fast, simple object-to-object and broadcast signaling"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "blinker-1.7.0-py3-none-any.whl", hash = "sha256:c3f865d4d54db7abc53758a01601cf343fe55b84c1de4e3fa910e420b438d5b9"},
+    {file = "blinker-1.7.0.tar.gz", hash = "sha256:e6820ff6fa4e4d1d8e2747c2283749c3f547e4fee112b98555cdcdae32996182"},
+]
+
+[[package]]
 name = "certifi"
 version = "2024.2.2"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -691,6 +702,28 @@ files = [
 
 [package.extras]
 tests = ["asttokens (>=2.1.0)", "coverage", "coverage-enable-subprocess", "ipython", "littleutils", "pytest", "rich"]
+
+[[package]]
+name = "flask"
+version = "3.0.3"
+description = "A simple framework for building complex web applications."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "flask-3.0.3-py3-none-any.whl", hash = "sha256:34e815dfaa43340d1d15a5c3a02b8476004037eb4840b34910c6e21679d288f3"},
+    {file = "flask-3.0.3.tar.gz", hash = "sha256:ceb27b0af3823ea2737928a4d99d125a06175b8512c445cbd9a9ce200ef76842"},
+]
+
+[package.dependencies]
+blinker = ">=1.6.2"
+click = ">=8.1.3"
+itsdangerous = ">=2.1.2"
+Jinja2 = ">=3.1.2"
+Werkzeug = ">=3.0.0"
+
+[package.extras]
+async = ["asgiref (>=3.2)"]
+dotenv = ["python-dotenv"]
 
 [[package]]
 name = "frozenlist"
@@ -1172,6 +1205,17 @@ widgetsnbextension = ">=4.0.10,<4.1.0"
 
 [package.extras]
 test = ["ipykernel", "jsonschema", "pytest (>=3.6.0)", "pytest-cov", "pytz"]
+
+[[package]]
+name = "itsdangerous"
+version = "2.1.2"
+description = "Safely pass data to untrusted environments and back."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "itsdangerous-2.1.2-py3-none-any.whl", hash = "sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44"},
+    {file = "itsdangerous-2.1.2.tar.gz", hash = "sha256:5dbbc68b317e5e42f327f9021763545dc3fc3bfe22e6deb96aaf1fc38874156a"},
+]
 
 [[package]]
 name = "jedi"
@@ -2166,6 +2210,46 @@ setuptools = ">=16.0"
 wrapt = ">=1.0.0,<2.0.0"
 
 [[package]]
+name = "opentelemetry-instrumentation-flask"
+version = "0.45b0"
+description = "Flask instrumentation for OpenTelemetry"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "opentelemetry_instrumentation_flask-0.45b0-py3-none-any.whl", hash = "sha256:4a07d1bca110dff0e2ce51a2930df497e90982e3a36e0362272fa5080db7f851"},
+    {file = "opentelemetry_instrumentation_flask-0.45b0.tar.gz", hash = "sha256:70875ad03da6e4e07aada6795c65d6b919024a741f9295aa19a022f7f7afc900"},
+]
+
+[package.dependencies]
+importlib-metadata = ">=4.0"
+opentelemetry-api = ">=1.12,<2.0"
+opentelemetry-instrumentation = "0.45b0"
+opentelemetry-instrumentation-wsgi = "0.45b0"
+opentelemetry-semantic-conventions = "0.45b0"
+opentelemetry-util-http = "0.45b0"
+packaging = ">=21.0"
+
+[package.extras]
+instruments = ["flask (>=1.0)"]
+
+[[package]]
+name = "opentelemetry-instrumentation-wsgi"
+version = "0.45b0"
+description = "WSGI Middleware for OpenTelemetry"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "opentelemetry_instrumentation_wsgi-0.45b0-py3-none-any.whl", hash = "sha256:7a6f9c71b25f5c5e112827540008882f6a9088447cb65745e7f2083749516663"},
+    {file = "opentelemetry_instrumentation_wsgi-0.45b0.tar.gz", hash = "sha256:f53a2a38e6582406e207d404e4c1b859b83bec11a68ad6c7366642d01c873ad0"},
+]
+
+[package.dependencies]
+opentelemetry-api = ">=1.12,<2.0"
+opentelemetry-instrumentation = "0.45b0"
+opentelemetry-semantic-conventions = "0.45b0"
+opentelemetry-util-http = "0.45b0"
+
+[[package]]
 name = "opentelemetry-proto"
 version = "1.11.1"
 description = "OpenTelemetry Python Proto"
@@ -2204,6 +2288,17 @@ python-versions = ">=3.8"
 files = [
     {file = "opentelemetry_semantic_conventions-0.45b0-py3-none-any.whl", hash = "sha256:a4a6fb9a7bacd9167c082aa4681009e9acdbfa28ffb2387af50c2fef3d30c864"},
     {file = "opentelemetry_semantic_conventions-0.45b0.tar.gz", hash = "sha256:7c84215a44ac846bc4b8e32d5e78935c5c43482e491812a0bb8aaf87e4d92118"},
+]
+
+[[package]]
+name = "opentelemetry-util-http"
+version = "0.45b0"
+description = "Web util for OpenTelemetry"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "opentelemetry_util_http-0.45b0-py3-none-any.whl", hash = "sha256:6628868b501b3004e1860f976f410eeb3d3499e009719d818000f24ce17b6e33"},
+    {file = "opentelemetry_util_http-0.45b0.tar.gz", hash = "sha256:4ce08b6a7d52dd7c96b7705b5b4f06fdb6aa3eac1233b3b0bfef8a0cab9a92cd"},
 ]
 
 [[package]]
@@ -3623,6 +3718,23 @@ files = [
 ]
 
 [[package]]
+name = "werkzeug"
+version = "3.0.2"
+description = "The comprehensive WSGI web application library."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "werkzeug-3.0.2-py3-none-any.whl", hash = "sha256:3aac3f5da756f93030740bc235d3e09449efcf65f2f55e3602e1d851b8f48795"},
+    {file = "werkzeug-3.0.2.tar.gz", hash = "sha256:e39b645a6ac92822588e7b39a692e7828724ceae0b0d702ef96701f90e70128d"},
+]
+
+[package.dependencies]
+MarkupSafe = ">=2.1.1"
+
+[package.extras]
+watchdog = ["watchdog (>=2.3)"]
+
+[[package]]
 name = "widgetsnbextension"
 version = "4.0.10"
 description = "Jupyter interactive widgets for Jupyter Notebook"
@@ -3833,4 +3945,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.12"
-content-hash = "57ccdaf972525ab76b88eca77c6db501444f47734cee88c389a967562d5c4eb4"
+content-hash = "9b379ad9b19a278110f4f8396f6900937e4cc2524558d640ae09936e36fb9853"

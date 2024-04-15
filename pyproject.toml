@@ -21,6 +21,10 @@ opentelemetry-api = "^1.24.0"
 ipywidgets = "^8.1.2"
 
 
+[tool.poetry.group.dev.dependencies]
+flask = "^3.0.3"
+opentelemetry-instrumentation-flask = "^0.45b0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
