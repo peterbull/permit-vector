@@ -19,6 +19,7 @@ llama-index-llms-openai = "^0.1.15"
 opentelemetry-sdk = "^1.24.0"
 opentelemetry-api = "^1.24.0"
 ipywidgets = "^8.1.2"
+gcsfs = "^2024.3.1"
 
 
 [tool.poetry.group.dev.dependencies]
