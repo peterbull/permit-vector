@@ -19,7 +19,17 @@ llama-index-llms-openai = "^0.1.15"
 opentelemetry-sdk = "^1.24.0"
 opentelemetry-api = "^1.24.0"
 ipywidgets = "^8.1.2"
-gcsfs = "^2024.3.1"
+datasets = "^2.14.6"
+dspy-ai = "^2.4.5"
+opentelemetry-exporter-otlp = "^1.24.0"
+openinference-instrumentation-dspy = "^0.1.6"
+tqdm = "^4.66.2"
+requests = "^2.31.0"
+numpy = "^1.26.4"
+pandas = "^2.2.2"
+chromadb = "^0.4.24"
+pyzmq = "26.0.0"
+ollama = "^0.1.8"
 
 
 [tool.poetry.group.dev.dependencies]
